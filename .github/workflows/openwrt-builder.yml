@@ -15,6 +15,11 @@ name: OpenWrt Builder
 on:
   repository_dispatch:
   workflow_dispatch:
+    inputs:
+      enable_ssh:
+        description: 'Enable SSH connection'
+        required: true
+        default: 'false'
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
